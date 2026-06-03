@@ -5,6 +5,7 @@ import {
   TrendingUp,
   ArrowRight,
 } from 'lucide-react'
+import { motion } from 'framer-motion'
 import { FadeIn, StaggerContainer, StaggerItem } from './Animations'
 
 const BENEFITS = [
@@ -16,6 +17,9 @@ const BENEFITS = [
     accent: 'text-brand-500',
     bg: 'bg-brand-500/10',
     border: 'border-brand-500/20',
+    glow: 'rgba(240,177,0,0.3)',
+    gradFrom: 'from-brand-500',
+    gradTo: 'to-yellow-300',
   },
   {
     icon: Sparkles,
@@ -25,6 +29,9 @@ const BENEFITS = [
     accent: 'text-accent-cyan',
     bg: 'bg-accent-cyan/10',
     border: 'border-accent-cyan/20',
+    glow: 'rgba(0,229,255,0.3)',
+    gradFrom: 'from-accent-cyan',
+    gradTo: 'to-blue-400',
   },
   {
     icon: Shield,
@@ -34,6 +41,9 @@ const BENEFITS = [
     accent: 'text-accent-purple',
     bg: 'bg-accent-purple/10',
     border: 'border-accent-purple/20',
+    glow: 'rgba(179,136,255,0.3)',
+    gradFrom: 'from-accent-purple',
+    gradTo: 'to-pink-400',
   },
   {
     icon: TrendingUp,
@@ -43,13 +53,27 @@ const BENEFITS = [
     accent: 'text-accent-gold',
     bg: 'bg-yellow-500/10',
     border: 'border-yellow-500/20',
+    glow: 'rgba(255,214,0,0.3)',
+    gradFrom: 'from-yellow-400',
+    gradTo: 'to-brand-500',
   },
 ]
 
 export function YieldEarners() {
   return (
     <section className="relative py-24 lg:py-32 bg-surface-500" id="yield-earners">
-      <div className="max-w-7xl mx-auto px-6">
+      {/* Subtle top divider */}
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
+
+      {/* Background ambient blobs */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-0 left-[20%] w-[500px] h-[500px] rounded-full opacity-[0.04]"
+          style={{ background: 'radial-gradient(circle, rgba(240,177,0,1) 0%, transparent 70%)' }} />
+        <div className="absolute bottom-0 right-[10%] w-[400px] h-[400px] rounded-full opacity-[0.04]"
+          style={{ background: 'radial-gradient(circle, rgba(0,229,255,1) 0%, transparent 70%)' }} />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Section header */}
         <div className="max-w-3xl mb-16">
           <FadeIn>
@@ -76,12 +100,40 @@ export function YieldEarners() {
         <StaggerContainer className="grid sm:grid-cols-2 gap-5">
           {BENEFITS.map((b) => (
             <StaggerItem key={b.title}>
-              <div className="glass-card glass-card-hover p-7 h-full flex flex-col">
-                <div
-                  className={`w-12 h-12 rounded-xl ${b.bg} border ${b.border} flex items-center justify-center mb-5`}
-                >
-                  <b.icon className={`w-6 h-6 ${b.accent}`} />
+              <div className="glass-card p-7 h-full flex flex-col group relative overflow-hidden cursor-default"
+                style={{ transition: 'box-shadow 0.4s ease, border-color 0.4s ease, transform 0.3s ease' }}
+                onMouseEnter={(e) => {
+                  const el = e.currentTarget
+                  el.style.transform = 'translateY(-4px)'
+                  el.style.boxShadow = `0 20px 60px -15px ${b.glow}`
+                  el.style.borderColor = b.glow.replace('0.3', '0.35')
+                }}
+                onMouseLeave={(e) => {
+                  const el = e.currentTarget
+                  el.style.transform = 'translateY(0)'
+                  el.style.boxShadow = ''
+                  el.style.borderColor = ''
+                }}
+              >
+                {/* Gradient top bar */}
+                <div className={`absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r ${b.gradFrom} ${b.gradTo} opacity-50 group-hover:opacity-100 transition-opacity duration-300`} />
+
+                {/* Icon with pulsing glow */}
+                <div className="relative mb-5 w-fit">
+                  {/* Pulsing outer ring */}
+                  <motion.div
+                    className={`absolute inset-0 rounded-xl ${b.bg}`}
+                    animate={{ scale: [1, 1.35, 1], opacity: [0.5, 0, 0.5] }}
+                    transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+                  />
+                  <div
+                    className={`relative w-14 h-14 rounded-xl ${b.bg} border ${b.border} flex items-center justify-center`}
+                    style={{ boxShadow: `0 0 20px ${b.glow}` }}
+                  >
+                    <b.icon className={`w-7 h-7 ${b.accent}`} />
+                  </div>
                 </div>
+
                 <h3 className="text-lg font-bold text-white mb-3">
                   {b.title}
                 </h3>

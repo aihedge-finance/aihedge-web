@@ -95,17 +95,6 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/[0.04] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-600">
           <p>© {new Date().getFullYear()} AI Hedge Finance. All rights reserved.</p>
-          <p>
-            Built on{' '}
-            <a
-              href="https://base.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-500 hover:text-gray-300 transition-colors"
-            >
-              Base
-            </a>
-          </p>
         </div>
       </div>
     </footer>

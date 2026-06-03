@@ -2,24 +2,66 @@ import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { FadeIn } from './Animations'
 
+const FLOATING_TOKENS = [
+  { src: 'https://cryptologos.cc/logos/ethereum-eth-logo.svg',  size: 48, top: '15%', left: '8%',  delay: 0,   floatY: 12 },
+  { src: 'https://cryptologos.cc/logos/bitcoin-btc-logo.svg',    size: 40, top: '65%', left: '5%',  delay: 1.2, floatY: 15 },
+  { src: 'https://cryptologos.cc/logos/solana-sol-logo.svg',     size: 36, top: '35%', left: '12%', delay: 0.7, floatY: 10 },
+  { src: 'https://cryptologos.cc/logos/uniswap-uni-logo.svg',    size: 44, top: '20%', right: '8%', delay: 0.5, floatY: 14 },
+  { src: 'https://cryptologos.cc/logos/aave-aave-logo.svg',      size: 38, top: '60%', right: '6%', delay: 1.8, floatY: 12 },
+  { src: 'https://cryptologos.cc/logos/chainlink-link-logo.svg', size: 32, top: '80%', right: '12%',delay: 0.9, floatY: 8  },
+]
+
 export function FinalCTA() {
   return (
-    <section className="relative py-24 lg:py-32 bg-surface-500" id="cta">
+    <section className="relative py-24 lg:py-32 bg-surface-500 overflow-hidden" id="cta">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 
-      {/* Glow */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          animate={{ scale: [1, 1.15, 1], opacity: [0.1, 0.2, 0.1] }}
-          transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full"
+      {/* Double-ring pulse background */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        {[0, 2.5, 5].map((delay) => (
+          <motion.div
+            key={delay}
+            className="absolute rounded-full border border-brand-500/10"
+            animate={{ scale: [0.6, 2.2], opacity: [0.4, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: 'easeOut', delay }}
+            style={{ width: '500px', height: '500px' }}
+          />
+        ))}
+        {/* Static central glow */}
+        <div
+          className="absolute rounded-full"
           style={{
-            background: 'radial-gradient(circle, rgba(0,230,118,0.12) 0%, transparent 70%)',
+            width: '600px',
+            height: '600px',
+            background: 'radial-gradient(circle, rgba(240,177,0,0.06) 0%, rgba(0,229,255,0.03) 40%, transparent 70%)',
           }}
         />
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      {/* Floating token icons */}
+      {FLOATING_TOKENS.map((t, i) => (
+        <motion.div
+          key={i}
+          className="absolute pointer-events-none"
+          style={{ top: t.top, left: (t as any).left, right: (t as any).right }}
+          animate={{ y: [-t.floatY, t.floatY, -t.floatY] }}
+          transition={{ duration: 6 + i * 0.5, repeat: Infinity, ease: 'easeInOut', delay: t.delay }}
+        >
+          <img
+            src={t.src}
+            alt=""
+            style={{
+              width: t.size,
+              height: t.size,
+              filter: 'blur(3px) brightness(0.85) saturate(1.2)',
+              opacity: 0.55,
+            }}
+            draggable={false}
+          />
+        </motion.div>
+      ))}
+
+      <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
         <FadeIn>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] text-white mb-6">
             Ready to put your{' '}
@@ -35,7 +77,7 @@ export function FinalCTA() {
         </FadeIn>
 
         <FadeIn delay={0.3}>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <a
               href="https://dapp.aihedge.finance"
               target="_blank"
@@ -57,6 +99,7 @@ export function FinalCTA() {
             </a>
           </div>
         </FadeIn>
+
       </div>
     </section>
   )
