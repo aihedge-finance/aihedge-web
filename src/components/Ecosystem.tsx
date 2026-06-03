@@ -12,7 +12,7 @@ export const PARTNERS = [
     logo: '/images/partners/1inch.svg',
     link: 'https://www.1inch.io',
     description: '1inch is a leading price aggregator that delivers the very best of exchange pricing for your digital assets. Through AI Hedge ZAP, you can enter any vault at optimal prices faciliated by 1inch.',
-    active: true
+    active: false
   },
   {
     name: 'Aave',
@@ -76,7 +76,7 @@ export const PARTNERS = [
     logo: '/images/partners/coinbase_wallet.svg',
     link: 'https://www.coinbase.com/wallet',
     description: 'Store and manage all of your crypto, NFTs, and multiple wallets in one place with Coinbase\'s flagship wallet. Seemless deposit and withdraw onchain assets onto Coinbase Exchange with just a few taps.',
-    active: true
+    active: false
   },
   {
     name: 'CoinGecko',
@@ -108,7 +108,7 @@ export const PARTNERS = [
     logo: '/images/partners/cryptocom.svg',
     link: 'https://crypto.com',
     description: 'One of the world\'s largest digital asset exchanges, Crypto.com offers access to hundreds of digital assets at the click of a button. CDC also built and maintain the Cronos blockchain, an EVM chain that hosts AI Hedge yield strategies.',
-    active: true
+    active: false
   },
   {
     name: 'DeBank',
@@ -148,7 +148,7 @@ export const PARTNERS = [
     logo: '/images/partners/gelato.svg',
     link: 'https://www.gelato.network',
     description: 'Gelato is web3’s decentralized backend empowering builders to create augmented smart contracts that are automated, gasless & off-chain aware on all major EVM-compatible blockchains.',
-    active: true
+    active: false
   },
   {
     name: 'Immunefi',
@@ -201,7 +201,7 @@ export const PARTNERS = [
   {
     name: 'OKX Wallet',
     category: 'WALLET',
-    logo: '/images/partners/okx_wallet.jpg',
+    logo: '/images/partners/okx_wallet.webp',
     link: 'https://www.okx.com/web3',
     description: 'OKX Wallet is a secure, multi-platform, non-custodial digital asset wallet supporting over 80 blockchains. AI Hedge integrates OKX Wallet to give users seamless access to institutional-grade yield strategies.',
     active: true
@@ -228,7 +228,7 @@ export const PARTNERS = [
     logo: '/images/partners/qidao.svg',
     link: 'https://app.mai.finance',
     description: 'QiDao is the original cross-chain overcollateralized stablecoin protocol, which allows users to mint stablecoins (MAI) against the value of their decentralized token collaterals.',
-    active: true
+    active: false
   },
   {
     name: 'Rabby',
