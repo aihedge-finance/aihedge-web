@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { FadeIn } from './Animations'
@@ -36,6 +36,19 @@ export function Hero() {
       duration: 2.5 + Math.random() * 1.5,
     }))
   }, [])
+
+  const floatingTokens = useMemo(() => [
+    { id: 'eth',  src: 'https://cryptologos.cc/logos/ethereum-eth-logo.svg',      size: 80, x: 8,  y: 12, floatY: 18, floatDur: 7,   delay: 0,   glow: 'rgba(130,170,255,0.5)'  },
+    { id: 'btc',  src: 'https://cryptologos.cc/logos/bitcoin-btc-logo.svg',        size: 72, x: 85, y: 18, floatY: 14, floatDur: 8,   delay: 1,   glow: 'rgba(247,147,26,0.5)'  },
+    { id: 'sol',  src: 'https://cryptologos.cc/logos/solana-sol-logo.svg',         size: 64, x: 5,  y: 55, floatY: 20, floatDur: 6.5, delay: 0.5, glow: 'rgba(153,69,255,0.5)'  },
+    { id: 'aave', src: 'https://cryptologos.cc/logos/aave-aave-logo.svg',          size: 60, x: 90, y: 50, floatY: 16, floatDur: 7.5, delay: 2,   glow: 'rgba(43,180,196,0.5)'  },
+    { id: 'link', src: 'https://cryptologos.cc/logos/chainlink-link-logo.svg',     size: 56, x: 12, y: 82, floatY: 12, floatDur: 9,   delay: 1.5, glow: 'rgba(55,91,210,0.5)'   },
+    { id: 'uni',  src: 'https://cryptologos.cc/logos/uniswap-uni-logo.svg',        size: 68, x: 78, y: 78, floatY: 18, floatDur: 6,   delay: 3,   glow: 'rgba(255,0,122,0.5)'   },
+    { id: 'arb',  src: 'https://cryptologos.cc/logos/arbitrum-arb-logo.svg',       size: 54, x: 25, y: 8,  floatY: 15, floatDur: 8.5, delay: 2.5, glow: 'rgba(40,160,240,0.5)'  },
+    { id: 'op',   src: 'https://cryptologos.cc/logos/optimism-ethereum-op-logo.svg', size: 52, x: 72, y: 10, floatY: 13, floatDur: 7,   delay: 0.8, glow: 'rgba(255,4,32,0.5)'    },
+  ], [])
+
+  const [hoveredToken, setHoveredToken] = useState<string | null>(null)
 
   return (
     <section
@@ -213,6 +226,63 @@ export function Hero() {
               }}
             />
           ))}
+        </div>
+
+        {/* Layer 7: Floating Token Icons – blurred, clear on hover */}
+        <div className="absolute inset-0 overflow-hidden">
+          {floatingTokens.map((token) => {
+            const isHovered = hoveredToken === token.id
+            return (
+              <motion.div
+                key={token.id}
+                className="absolute cursor-pointer"
+                style={{
+                  left: `${token.x}%`,
+                  top: `${token.y}%`,
+                  zIndex: isHovered ? 20 : 10,
+                }}
+                animate={{
+                  y: [-token.floatY, token.floatY, -token.floatY],
+                }}
+                transition={{
+                  duration: token.floatDur,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                  delay: token.delay,
+                }}
+                onMouseEnter={() => setHoveredToken(token.id)}
+                onMouseLeave={() => setHoveredToken(null)}
+              >
+                {/* Glow ring behind token */}
+                <div
+                  className="absolute rounded-full transition-all duration-500 ease-out"
+                  style={{
+                    inset: isHovered ? -12 : 0,
+                    background: isHovered
+                      ? 'radial-gradient(circle, rgba(240,177,0,0.25) 0%, rgba(240,177,0,0.08) 50%, transparent 70%)'
+                      : 'transparent',
+                    opacity: isHovered ? 1 : 0,
+                  }}
+                />
+                <img
+                  src={token.src}
+                  alt={token.id}
+                  className="relative rounded-full transition-all duration-500 ease-out"
+                  style={{
+                    width: token.size,
+                    height: token.size,
+                    filter: isHovered ? 'blur(0px) brightness(1.15) saturate(1.2)' : 'blur(4px) brightness(1.0) saturate(1.3)',
+                    opacity: isHovered ? 1 : 0.7,
+                    transform: isHovered ? 'scale(1.25)' : 'scale(1)',
+                    boxShadow: isHovered
+                      ? `0 0 35px ${token.glow}, 0 0 70px ${token.glow}`
+                      : `0 0 20px ${token.glow}`,
+                  }}
+                  draggable={false}
+                />
+              </motion.div>
+            )
+          })}
         </div>
       </div>
 
