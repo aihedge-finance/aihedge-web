@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Enso logo: stylized "E" / infinity-like mark in white -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="white" stroke-width="12"/>
+  <path d="M55 70 Q100 40 145 70 Q100 100 55 70Z" fill="white"/>
+  <path d="M55 130 Q100 160 145 130 Q100 100 55 130Z" fill="white"/>
+  <circle cx="100" cy="100" r="8" fill="white"/>
+</svg>

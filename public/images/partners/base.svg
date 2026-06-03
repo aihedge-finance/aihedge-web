@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Base (Coinbase L2) logo: blue circle with white "B" shape -->
+  <circle cx="100" cy="100" r="100" fill="#0052FF"/>
+  <path d="M100 30C61.3 30 30 61.3 30 100C30 138.7 61.3 170 100 170C138.7 170 170 138.7 170 100C170 61.3 138.7 30 100 30ZM100 150C72.4 150 50 127.6 50 100C50 72.4 72.4 50 100 50C127.6 50 150 72.4 150 100C150 127.6 127.6 150 100 150Z" fill="white"/>
+</svg>
