@@ -67,7 +67,7 @@ export function HowItWorks() {
 
                 <div className="glass-card p-7 text-center h-full group hover:border-brand-500/20 transition-colors duration-300">
                   {/* Step number */}
-                  <div className="text-4xl font-extrabold text-white/[0.04] font-mono absolute top-4 right-4">
+                  <div className="text-4xl font-extrabold text-white/20 group-hover:text-brand-500/40 font-mono absolute top-4 right-4 transition-colors duration-300">
                     {step.number}
                   </div>
 
