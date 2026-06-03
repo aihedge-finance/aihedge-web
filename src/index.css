@@ -8,12 +8,12 @@
     --color-brand: rgb(240, 177, 0);
     --color-brand-dim: rgba(240, 177, 0, 0.15);
     --color-brand-glow: rgba(240, 177, 0, 0.3);
-    --color-surface: rgb(25, 28, 41);
-    --color-surface-elevated: rgb(35, 39, 54);
-    --color-surface-card: rgb(52, 57, 70);
+    --color-surface: rgb(34, 36, 42);
+    --color-surface-elevated: rgb(45, 48, 57);
+    --color-surface-card: rgb(74, 77, 92);
     --color-text: rgb(255, 255, 255);
     --color-text-muted: rgb(184, 189, 204);
-    --color-border: rgb(66, 71, 82);
+    --color-border: rgb(90, 93, 110);
     --color-accent-cyan: #00e5ff;
     --color-accent-purple: #b388ff;
   }
@@ -52,7 +52,7 @@
   }
 
   .glass-card {
-    background: rgba(52, 57, 70, 0.6);
+    background: rgba(74, 77, 92, 0.6);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--color-border);

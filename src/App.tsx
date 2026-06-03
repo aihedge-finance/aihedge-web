@@ -2,20 +2,21 @@ import { Routes, Route } from 'react-router-dom'
 import { Navbar } from './components/Navbar'
 import { Hero } from './components/Hero'
 import { EarnWithAIHedge } from './components/EarnWithAIHedge'
-import { Depositors } from './components/Depositors'
+import { YieldEarners } from './components/YieldEarners'
 import { HowItWorks } from './components/HowItWorks'
 import { Curators } from './components/Curators'
 import { Ecosystem } from './components/Ecosystem'
 import { FinalCTA } from './components/FinalCTA'
 import { PartnersPage } from './components/PartnersPage'
 import { Footer } from './components/Footer'
+import { BackToTop } from './components/BackToTop'
 
 function HomePage() {
   return (
     <>
       <Hero />
       <EarnWithAIHedge />
-      <Depositors />
+      <YieldEarners />
       <HowItWorks />
       <Curators />
       <Ecosystem />
@@ -35,6 +36,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      <BackToTop />
     </div>
   )
 }

@@ -51,7 +51,7 @@ export const PARTNERS = [
     category: 'INFRA',
     logo: '/images/partners/base.svg',
     link: 'https://base.org',
-    description: 'Base is a secure, low-cost, builder-friendly Ethereum L2 built by Coinbase. AI Hedge is natively deployed on Base, leveraging its high throughput and low fees to deliver the best possible experience for depositors and curators alike.',
+    description: 'Base is a secure, low-cost, builder-friendly Ethereum L2 built by Coinbase. AI Hedge is natively deployed on Base, leveraging its high throughput and low fees to deliver the best possible experience for users and curators alike.',
     active: true
   },
   {
@@ -131,7 +131,7 @@ export const PARTNERS = [
     category: 'DEFI',
     logo: '/images/partners/etherfi.jpg',
     link: 'https://www.ether.fi',
-    description: 'Ether.fi is a decentralized, non-custodial delegated staking protocol with a Liquid Staking Token. AI Hedge utilizes Ether.fi\'s liquid staking solutions to offer depositors optimized restaking yield.',
+    description: 'Ether.fi is a decentralized, non-custodial delegated staking protocol with a Liquid Staking Token. AI Hedge utilizes Ether.fi\'s liquid staking solutions to offer users optimized restaking yield.',
     active: true
   },
   {
@@ -360,7 +360,7 @@ export function Ecosystem() {
   const row2 = useMemo(() => activePartners.slice(Math.ceil(activePartners.length / 2)), [activePartners])
 
   return (
-    <section className="relative py-24 overflow-hidden" id="ecosystem">
+    <section className="relative py-24 overflow-hidden bg-surface-400" id="ecosystem">
       {/* Top divider light line */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 

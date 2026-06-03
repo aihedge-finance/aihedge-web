@@ -31,7 +31,7 @@ const STEPS = [
 
 export function HowItWorks() {
   return (
-    <section className="relative py-24 lg:py-32" id="how-it-works">
+    <section className="relative py-24 lg:py-32 bg-surface-400" id="how-it-works">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6">

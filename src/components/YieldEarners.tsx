@@ -46,15 +46,15 @@ const BENEFITS = [
   },
 ]
 
-export function Depositors() {
+export function YieldEarners() {
   return (
-    <section className="relative py-24 lg:py-32" id="depositors">
+    <section className="relative py-24 lg:py-32 bg-surface-500" id="yield-earners">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section header */}
         <div className="max-w-3xl mb-16">
           <FadeIn>
             <p className="text-brand-500 font-semibold text-sm tracking-widest uppercase mb-4">
-              For Depositors
+              For Yield Earners
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>
@@ -101,7 +101,7 @@ export function Depositors() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
-              id="depositors-cta"
+              id="yield-earners-cta"
             >
               Explore Vaults
               <ArrowRight className="w-5 h-5" />

@@ -24,7 +24,7 @@ export function Hero() {
       {/* Premium Animated Background */}
       <div className="absolute inset-0 overflow-hidden bg-surface-500">
         {/* Animated Aurora Glows */}
-        <div className="absolute inset-0 opacity-40 mix-blend-screen filter blur-[120px] pointer-events-none">
+        <div className="absolute inset-0 opacity-75 mix-blend-screen filter blur-[120px] pointer-events-none">
           {/* Glow 1 (Green) */}
           <motion.div
             animate={{
@@ -33,7 +33,7 @@ export function Hero() {
               scale: [1, 1.25, 1],
             }}
             transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }}
-            className="absolute top-[-20%] left-[15%] w-[600px] h-[600px] rounded-full bg-brand-500/20"
+            className="absolute top-[-20%] left-[15%] w-[600px] h-[600px] rounded-full bg-brand-500/30"
           />
           {/* Glow 2 (Cyan) */}
           <motion.div
@@ -43,7 +43,7 @@ export function Hero() {
               scale: [1.2, 0.9, 1.2],
             }}
             transition={{ duration: 25, repeat: Infinity, ease: 'easeInOut' }}
-            className="absolute top-[10%] right-[5%] w-[700px] h-[700px] rounded-full bg-accent-cyan/25"
+            className="absolute top-[10%] right-[5%] w-[700px] h-[700px] rounded-full bg-accent-cyan/35"
           />
           {/* Glow 3 (Purple) */}
           <motion.div
@@ -53,14 +53,14 @@ export function Hero() {
               scale: [0.95, 1.15, 0.95],
             }}
             transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-            className="absolute bottom-[-15%] left-[5%] w-[650px] h-[650px] rounded-full bg-accent-purple/20"
+            className="absolute bottom-[-15%] left-[5%] w-[650px] h-[650px] rounded-full bg-accent-purple/30"
           />
         </div>
 
         {/* 3D Perspective Grid flowing forward */}
         <div className="absolute inset-0 overflow-hidden" style={{ perspective: '1000px' }}>
           <motion.div 
-            className="absolute inset-0 origin-top opacity-[0.2]"
+            className="absolute inset-0 origin-top opacity-[0.35]"
             style={{
               transform: 'rotateX(60deg) scale(2.2) translateY(-15%)',
               backgroundImage: `
@@ -75,7 +75,7 @@ export function Hero() {
               backgroundPosition: ["0px 0px", "0px 50px"]
             }}
             transition={{
-              duration: 12,
+              duration: 6,
               repeat: Infinity,
               ease: "linear"
             }}

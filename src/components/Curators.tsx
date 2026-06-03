@@ -40,7 +40,7 @@ const FEATURES = [
 
 export function Curators() {
   return (
-    <section className="relative py-24 lg:py-32" id="curators">
+    <section className="relative py-24 lg:py-32 bg-surface-500" id="curators">
       {/* Subtle divider glow */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 
@@ -60,7 +60,7 @@ export function Curators() {
           <FadeIn delay={0.2}>
             <p className="text-lg text-gray-400 leading-relaxed">
               Curate unique strategies to streamline lending at any scale or sophistication. 
-              Build trust, attract depositor capital, and monetize your investment expertise.
+              Build trust, attract capital, and monetize your investment expertise.
             </p>
           </FadeIn>
         </div>

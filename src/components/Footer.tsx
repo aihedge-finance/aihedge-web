@@ -12,7 +12,6 @@ const FOOTER_LINKS = {
   Developers: [
     { label: 'GitHub', href: 'https://github.com/aihedge-finance', external: true },
     { label: 'Deploy Strategy', href: 'https://dapp.aihedge.finance', external: true },
-    { label: 'ERC-4626 Spec', href: 'https://eips.ethereum.org/EIPS/eip-4626', external: true },
   ],
 }
 
@@ -28,7 +27,7 @@ export function Footer() {
             </div>
             <p className="text-gray-500 text-sm leading-relaxed max-w-xs mb-6">
               A two-sided decentralized yield marketplace connecting
-              depositors with top-tier strategists through permissionless
+              yield earners with top-tier strategists through permissionless
               ERC-4626 vaults.
             </p>
 

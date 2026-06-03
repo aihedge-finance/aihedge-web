@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { Menu, X, FileText } from 'lucide-react'
 
 const NAV_LINKS = [
-  { label: 'Depositors', href: '/#depositors' },
+  { label: 'Yield Earners', href: '/#yield-earners' },
   { label: 'How It Works', href: '/#how-it-works' },
   { label: 'Vault Creation', href: '/#curators' },
   { label: 'Ecosystem', href: '/#ecosystem' },

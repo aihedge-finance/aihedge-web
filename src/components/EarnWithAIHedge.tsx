@@ -39,7 +39,7 @@ export function EarnWithAIHedge() {
   const [activeTab, setActiveTab] = useState<TabType>('singleAsset')
 
   return (
-    <section className="relative py-24 overflow-hidden" id="earn">
+    <section className="relative py-24 overflow-hidden bg-surface-400" id="earn">
       {/* Decorative background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-glow/20 rounded-full blur-[120px] pointer-events-none -z-10" />
 
