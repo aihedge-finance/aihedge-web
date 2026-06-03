@@ -80,7 +80,7 @@ export function EarnWithAIHedge() {
           <div className="relative flex items-center justify-center gap-0 overflow-hidden">
             <div className="relative flex items-center w-full max-w-3xl mx-auto">
               {FLOW_NODES.map((node, i) => (
-                <div key={node} className="flex items-center flex-1">
+                <div key={node} className={`flex items-center ${i < FLOW_NODES.length - 1 ? 'flex-1' : ''}`}>
                   {/* Node */}
                   <div className="flex flex-col items-center flex-shrink-0">
                     <motion.div
