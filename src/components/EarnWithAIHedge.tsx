@@ -6,11 +6,11 @@ interface Step {
   description: string
 }
 
-type TabType = 'singleAsset' | 'lp' | 'zap'
+type TabType = 'singleAsset' | 'trainedAI' | 'zap'
 
 const TABS: { id: TabType; label: string }[] = [
   { id: 'singleAsset', label: 'Single Asset' },
-  { id: 'lp', label: 'Liquidity Pools' },
+  { id: 'trainedAI', label: 'Trained AI' },
   { id: 'zap', label: 'ZAP' }
 ]
 
@@ -21,11 +21,11 @@ const STEPS_DATA: Record<TabType, Step[]> = {
     { title: 'Reinvest', description: 'Your interest is used to purchase more of the asset and reinvested (strategy dependent) automatically, saving you time and fees.' },
     { title: 'Risk Adjusted', description: 'AI Hedge regularly and automatically check for strategy risk and adjust proportion automatically.' }
   ],
-  lp: [
-    { title: 'Deposit', description: 'Stake LP tokens from external DEXs in an AI Hedge Vault.' },
-    { title: 'Earn Rewards', description: 'The interest earned on your LP stake is held in custody by AI Hedge.' },
-    { title: 'Reinvest', description: 'Your interest is used to purchase more of the underlying token pair and reinvested.' },
-    { title: 'Autocompound', description: 'AI Hedge regularly and automatically repeats the process, saving you time and fees.' }
+  trainedAI: [
+    { title: 'Check Strategy Specialty', description: "Examine the AI's model parameters, risk-mitigation features, and asset allocations." },
+    { title: 'Deposit', description: 'Invest your tokens into the AI-managed vault to initiate the automated strategy.' },
+    { title: 'Check Performance Statistics', description: 'Monitor live yield statistics, historical returns, and strategy health metrics.' },
+    { title: 'Harvest', description: 'Yields are automatically harvested and compounded back into your position.' }
   ],
   zap: [
     { title: 'Select Target', description: 'Choose a target vault on your desired network (e.g., Ethereum Mainnet) that you want to deposit into.' },

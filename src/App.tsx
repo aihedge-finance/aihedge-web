@@ -4,7 +4,6 @@ import { Hero } from './components/Hero'
 import { EarnWithAIHedge } from './components/EarnWithAIHedge'
 import { Depositors } from './components/Depositors'
 import { HowItWorks } from './components/HowItWorks'
-import { Security } from './components/Security'
 import { Curators } from './components/Curators'
 import { Ecosystem } from './components/Ecosystem'
 import { FinalCTA } from './components/FinalCTA'
@@ -18,7 +17,6 @@ function HomePage() {
       <EarnWithAIHedge />
       <Depositors />
       <HowItWorks />
-      <Security />
       <Curators />
       <Ecosystem />
       <FinalCTA />
