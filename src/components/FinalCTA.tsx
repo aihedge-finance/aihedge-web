@@ -64,20 +64,26 @@ export function FinalCTA() {
 
       <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
         <FadeIn>
+          <p className="text-accent-cyan font-semibold text-sm tracking-widest uppercase mb-3">
+            Get Started
+          </p>
+        </FadeIn>
+
+        <FadeIn delay={0.15}>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] text-white mb-6">
             Ready to put your{' '}
             <span className="gradient-text">capital to work?</span>
           </h2>
         </FadeIn>
 
-        <FadeIn delay={0.15}>
+        <FadeIn delay={0.3}>
           <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10">
             Whether you're depositing into curated vaults or deploying
             your next strategy — the yield marketplace is open.
           </p>
         </FadeIn>
 
-        <FadeIn delay={0.3}>
+        <FadeIn delay={0.45}>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <a
               href="https://dapp.aihedge.finance"
