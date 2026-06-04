@@ -287,8 +287,15 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+        {/* Tagline */}
+        <FadeIn delay={0.1}>
+          <p className="text-accent-cyan font-semibold text-sm tracking-widest uppercase mb-4">
+            AI-Powered Yield
+          </p>
+        </FadeIn>
+
         {/* Headline */}
-        <FadeIn delay={0.2}>
+        <FadeIn delay={0.25}>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tight leading-[1.15] mb-6">
             <span className="block text-white pb-1">Invest wisely with</span>
             <span className="block gradient-text pb-2">AI Hedge</span>
@@ -296,14 +303,14 @@ export function Hero() {
         </FadeIn>
 
         {/* Subheadline */}
-        <FadeIn delay={0.35}>
+        <FadeIn delay={0.4}>
           <p className="max-w-2xl mx-auto text-lg sm:text-xl text-gray-400 leading-relaxed mb-10">
             Earn great APYs across chains with fascinating innovations
           </p>
         </FadeIn>
 
         {/* CTAs */}
-        <FadeIn delay={0.5}>
+        <FadeIn delay={0.55}>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="https://dapp.aihedge.finance"

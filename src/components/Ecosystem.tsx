@@ -366,6 +366,9 @@ export function Ecosystem() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 text-center mb-12">
         <FadeIn>
+          <p className="text-accent-cyan font-semibold text-sm tracking-widest uppercase mb-3">
+            Trusted Partners
+          </p>
           <h2 className="text-4xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">
             Our Ecosystem
           </h2>
