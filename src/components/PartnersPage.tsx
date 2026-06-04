@@ -1,9 +1,10 @@
 import { useState, useMemo, useEffect } from 'react'
 import { Search, ExternalLink, ArrowLeft, X } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { PARTNERS, PartnerLogo } from './Ecosystem'
 
 export function PartnersPage() {
+  const navigate = useNavigate()
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('ALL')
 
@@ -11,6 +12,10 @@ export function PartnersPage() {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  const handleBack = () => {
+    navigate('/', { state: { scrollTo: 'ecosystem' } })
+  }
 
   const activePartners = useMemo(() => {
     return [...PARTNERS].filter((p) => p.active).sort((a, b) => a.name.localeCompare(b.name))
@@ -44,13 +49,13 @@ export function PartnersPage() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Back Button */}
         <div className="mb-10">
-          <Link
-            to="/"
+          <button
+            onClick={handleBack}
             className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-white transition-colors duration-200 font-medium"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Home
-          </Link>
+          </button>
         </div>
 
         {/* Page Header */}

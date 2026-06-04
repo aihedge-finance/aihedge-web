@@ -8,6 +8,7 @@ const FOOTER_LINKS = {
   Community: [
     { label: 'Twitter / X', href: 'https://x.com/AIHEDGE_finance', external: true },
     { label: 'Telegram', href: 'https://t.me/aiartinc', external: true },
+    { label: 'Partners', href: '/partners' },
   ],
   Developers: [
     { label: 'GitHub', href: 'https://github.com/aihedge-finance', external: true },
