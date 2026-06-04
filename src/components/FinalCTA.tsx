@@ -1,17 +1,18 @@
+import { useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { FadeIn } from './Animations'
 
-const FLOATING_TOKENS = [
-  { src: 'https://cryptologos.cc/logos/ethereum-eth-logo.svg',  size: 48, top: '15%', left: '8%',  delay: 0,   floatY: 12 },
-  { src: 'https://cryptologos.cc/logos/bitcoin-btc-logo.svg',    size: 40, top: '65%', left: '5%',  delay: 1.2, floatY: 15 },
-  { src: 'https://cryptologos.cc/logos/solana-sol-logo.svg',     size: 36, top: '35%', left: '12%', delay: 0.7, floatY: 10 },
-  { src: 'https://cryptologos.cc/logos/uniswap-uni-logo.svg',    size: 44, top: '20%', right: '8%', delay: 0.5, floatY: 14 },
-  { src: 'https://cryptologos.cc/logos/aave-aave-logo.svg',      size: 38, top: '60%', right: '6%', delay: 1.8, floatY: 12 },
-  { src: 'https://cryptologos.cc/logos/chainlink-link-logo.svg', size: 32, top: '80%', right: '12%',delay: 0.9, floatY: 8  },
-]
-
 export function FinalCTA() {
+  const floatingTokens = useMemo(() => [
+    { src: '/images/partners/ethereum.svg',  size: 48, top: '15%', left: '8%',  delay: 0,   floatY: 12 },
+    { src: '/images/partners/bitcoin.svg',   size: 40, top: '65%', left: '5%',  delay: 1.2, floatY: 15 },
+    { src: '/images/partners/solana.svg',    size: 36, top: '35%', left: '12%', delay: 0.7, floatY: 10 },
+    { src: '/images/partners/uniswap.svg',   size: 44, top: '20%', right: '8%', delay: 0.5, floatY: 14 },
+    { src: '/images/partners/aave.svg',      size: 38, top: '60%', right: '6%', delay: 1.8, floatY: 12 },
+    { src: '/images/partners/arbitrum.svg',  size: 32, top: '80%', right: '12%',delay: 0.9, floatY: 8  },
+  ], [])
+
   return (
     <section className="relative py-24 lg:py-32 bg-surface-400 overflow-hidden" id="cta">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
@@ -39,7 +40,7 @@ export function FinalCTA() {
       </div>
 
       {/* Floating token icons */}
-      {FLOATING_TOKENS.map((t, i) => (
+      {floatingTokens.map((t, i) => (
         <motion.div
           key={i}
           className="absolute pointer-events-none"
