@@ -47,7 +47,7 @@ export function HowItWorks() {
   const inView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section className="relative py-24 lg:py-32 bg-surface-400" id="how-it-works">
+    <section className="relative py-24 lg:py-32 bg-surface-500" id="how-it-works">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 
       {/* Ambient corner glows */}

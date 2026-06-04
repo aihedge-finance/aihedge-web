@@ -360,7 +360,7 @@ export function Ecosystem() {
   const row2 = useMemo(() => activePartners.slice(Math.ceil(activePartners.length / 2)), [activePartners])
 
   return (
-    <section className="relative py-24 overflow-hidden bg-surface-400" id="ecosystem">
+    <section className="relative py-24 overflow-hidden bg-surface-500" id="ecosystem">
       {/* Top divider light line */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 
@@ -374,7 +374,7 @@ export function Ecosystem() {
       </div>
 
       {/* Rolling Banner */}
-      <div className="relative w-full overflow-hidden select-none py-10 flex flex-col gap-6 bg-surface-500/30">
+      <div className="relative w-full overflow-hidden select-none py-10 flex flex-col gap-6 bg-surface-400/30">
         {/* Row 1 - Scroll Left */}
         <div className="flex w-full marquee-container">
           <div className="marquee-content-left flex gap-6 flex-shrink-0 min-w-full justify-around">

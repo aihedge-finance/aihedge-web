@@ -20,7 +20,7 @@ const SPARKLINE = 'M0 40 C10 38 20 45 30 35 C40 25 50 30 60 20 C70 10 80 15 90 8
 
 export function Curators() {
   return (
-    <section className="relative py-24 lg:py-32 bg-surface-500" id="curators">
+    <section className="relative py-24 lg:py-32 bg-surface-400" id="curators">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 
       {/* Background ambient */}

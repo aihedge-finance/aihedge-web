@@ -13,7 +13,7 @@ const FLOATING_TOKENS = [
 
 export function FinalCTA() {
   return (
-    <section className="relative py-24 lg:py-32 bg-surface-500 overflow-hidden" id="cta">
+    <section className="relative py-24 lg:py-32 bg-surface-400 overflow-hidden" id="cta">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 
       {/* Double-ring pulse background */}

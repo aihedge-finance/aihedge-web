@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { Navbar } from './components/Navbar'
 import { Hero } from './components/Hero'
 import { EarnWithAIHedge } from './components/EarnWithAIHedge'
-import { YieldEarners } from './components/YieldEarners'
+// import { YieldEarners } from './components/YieldEarners'
 import { HowItWorks } from './components/HowItWorks'
 import { Curators } from './components/Curators'
 import { Ecosystem } from './components/Ecosystem'
@@ -29,7 +29,7 @@ function HomePage() {
     <>
       <Hero />
       <EarnWithAIHedge />
-      <YieldEarners />
+      {/* <YieldEarners /> */}
       <HowItWorks />
       <Curators />
       <Ecosystem />
