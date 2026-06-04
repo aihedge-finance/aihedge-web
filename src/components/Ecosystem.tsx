@@ -284,7 +284,7 @@ export const PARTNERS = [
     logo: '/images/partners/system_9.svg',
     link: 'https://system9.io',
     description: 'System 9 is a global market maker and software development company that offers crypto projects like AI Hedge the expertise, flexibility and transparency they need to achieve successful liquidity both on and off the blockchain.',
-    active: true
+    active: false
   },
   {
     name: 'Transak',
@@ -324,7 +324,7 @@ export const PARTNERS = [
     logo: '/images/partners/zellic.svg',
     link: 'https://www.zellic.io',
     description: 'Zellic specializes in securing emerging technologies. AI Hedge relies on Zellic\'s comprehensive security assessments to catch vulnerabilities and weaknesses in smart contracts and protect user funds.',
-    active: true
+    active: false
   }
 ]
 

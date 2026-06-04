@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from 'react'
 import { Search, ExternalLink, ArrowLeft, X } from 'lucide-react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { PARTNERS, PartnerLogo } from './Ecosystem'
 
 export function PartnersPage() {
