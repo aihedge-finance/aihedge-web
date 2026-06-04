@@ -296,7 +296,7 @@ export const PARTNERS = [
   },
   {
     name: 'XRP',
-    category: 'DEFI',
+    category: 'INFRA',
     logo: '/images/partners/xrp.svg',
     link: 'https://xrpl.org',
     description: 'XRP Ledger (XRPL) is a decentralized, public blockchain run by a global developer community. It is fast, energy-efficient, and reliable, offering a robust foundation for building advanced tokenized use cases.',
@@ -381,11 +381,19 @@ export function Ecosystem() {
             {[...row1, ...row1, ...row1].map((p, idx) => (
               <div
                 key={`${p.name}-r1-${idx}`}
-                className="w-16 h-16 sm:w-20 sm:h-20 bg-surface-200 border border-white/[0.08] rounded-2xl rotate-45 flex items-center justify-center overflow-hidden flex-shrink-0 transition-transform duration-300 hover:scale-110 hover:border-accent-cyan/40 cursor-pointer shadow-lg"
-                title={p.name}
+                className="group w-16 h-16 sm:w-20 sm:h-20 bg-surface-200 border border-white/[0.08] rounded-2xl rotate-45 flex items-center justify-center overflow-hidden flex-shrink-0 transition-transform duration-300 hover:scale-110 hover:border-accent-cyan/40 cursor-pointer shadow-lg"
               >
-                <div className="-rotate-45 flex items-center justify-center w-full h-full p-2">
-                  <PartnerLogo name={p.name} logo={p.logo} />
+                <div className="-rotate-45 flex items-center justify-center w-full h-full p-1.5 relative">
+                  {/* Logo state */}
+                  <div className="transition-all duration-300 group-hover:opacity-0 group-hover:scale-75 flex items-center justify-center">
+                    <PartnerLogo name={p.name} logo={p.logo} />
+                  </div>
+                  {/* Hover name state */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 p-1 text-center select-none pointer-events-none">
+                    <span className="text-[9px] sm:text-[10px] font-bold text-white leading-tight tracking-tight">
+                      {p.name}
+                    </span>
+                  </div>
                 </div>
               </div>
             ))}
@@ -398,11 +406,19 @@ export function Ecosystem() {
             {[...row2, ...row2, ...row2].map((p, idx) => (
               <div
                 key={`${p.name}-r2-${idx}`}
-                className="w-16 h-16 sm:w-20 sm:h-20 bg-surface-200 border border-white/[0.08] rounded-2xl rotate-45 flex items-center justify-center overflow-hidden flex-shrink-0 transition-transform duration-300 hover:scale-110 hover:border-accent-cyan/40 cursor-pointer shadow-lg"
-                title={p.name}
+                className="group w-16 h-16 sm:w-20 sm:h-20 bg-surface-200 border border-white/[0.08] rounded-2xl rotate-45 flex items-center justify-center overflow-hidden flex-shrink-0 transition-transform duration-300 hover:scale-110 hover:border-accent-cyan/40 cursor-pointer shadow-lg"
               >
-                <div className="-rotate-45 flex items-center justify-center w-full h-full p-2">
-                  <PartnerLogo name={p.name} logo={p.logo} />
+                <div className="-rotate-45 flex items-center justify-center w-full h-full p-1.5 relative">
+                  {/* Logo state */}
+                  <div className="transition-all duration-300 group-hover:opacity-0 group-hover:scale-75 flex items-center justify-center">
+                    <PartnerLogo name={p.name} logo={p.logo} />
+                  </div>
+                  {/* Hover name state */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 p-1 text-center select-none pointer-events-none">
+                    <span className="text-[9px] sm:text-[10px] font-bold text-white leading-tight tracking-tight">
+                      {p.name}
+                    </span>
+                  </div>
                 </div>
               </div>
             ))}
