@@ -83,33 +83,28 @@ export function EarnWithAIHedge() {
                 <div key={node} className={`flex items-center ${i < FLOW_NODES.length - 1 ? 'flex-1' : ''}`}>
                   {/* Node */}
                   <div className="flex flex-col items-center flex-shrink-0">
-                    <motion.div
-                      animate={{ boxShadow: ['0 0 0px rgba(240,177,0,0)', '0 0 20px rgba(240,177,0,0.4)', '0 0 0px rgba(240,177,0,0)'] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: i * 0.5 }}
+                    <div
                       className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-surface-300 border border-white/10 flex items-center justify-center relative overflow-hidden"
                     >
+                      {/* CSS glow ring — replaces Framer Motion boxShadow animation */}
+                      <div className="node-glow-ring" style={{ animationDelay: `${i * 0.5}s` }} />
                       <div className="absolute inset-0 bg-gradient-to-br from-brand-500/10 to-accent-cyan/5" />
                       <span className="relative text-xs sm:text-sm font-bold text-white text-center px-1 leading-tight">{node}</span>
-                    </motion.div>
+                    </div>
                     <div className="mt-2 w-1.5 h-1.5 rounded-full bg-brand-500/50" />
                   </div>
 
-                  {/* Connector with travelling dot */}
+                  {/* Connector with travelling dot — CSS animation */}
                   {i < FLOW_NODES.length - 1 && (
                     <div className="flex-1 relative h-[2px] mx-1 sm:mx-2">
                       {/* Base line */}
                       <div className="absolute inset-0 bg-gradient-to-r from-brand-500/30 via-accent-cyan/20 to-brand-500/30 rounded-full" />
-                      {/* Travelling glow dot */}
-                      <motion.div
+                      {/* Travelling glow dot — pure CSS */}
+                      <div
                         className="absolute top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-brand-500"
-                        style={{ boxShadow: '0 0 12px rgba(240,177,0,0.8), 0 0 24px rgba(240,177,0,0.4)' }}
-                        animate={{ left: ['0%', '100%'] }}
-                        transition={{
-                          duration: 1.5,
-                          repeat: Infinity,
-                          ease: 'easeInOut',
-                          delay: i * 0.5,
-                          repeatDelay: 1,
+                        style={{
+                          boxShadow: '0 0 12px rgba(240,177,0,0.8), 0 0 24px rgba(240,177,0,0.4)',
+                          animation: `travel-dot 1.5s ease-in-out infinite ${i * 0.5}s`,
                         }}
                       />
                     </div>

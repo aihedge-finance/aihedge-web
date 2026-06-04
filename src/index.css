@@ -226,3 +226,81 @@
   }
 }
 
+/* ===== Performance: CSS-only animations (replaces Framer Motion JS loops) ===== */
+
+/* Pulse ring — used in Hero, HowItWorks, FinalCTA */
+.pulse-ring {
+  position: absolute;
+  border-radius: 9999px;
+  will-change: transform, opacity;
+}
+
+@keyframes pulse-ring-expand {
+  0% { transform: scale(0.5); opacity: 0.5; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+@keyframes pulse-ring-expand-cta {
+  0% { transform: scale(0.6); opacity: 0.4; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+/* Hex grid scroll */
+@keyframes hex-scroll {
+  0% { background-position: 0px 0px; }
+  100% { background-position: 0px 100px; }
+}
+
+/* Nebula blob morphing (borderRadius only — x/y/scale stay in Framer Motion for initial entrance) */
+@keyframes nebula-morph-1 {
+  0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+  33% { border-radius: 50% 50% 30% 70% / 60% 40% 60% 40%; }
+  66% { border-radius: 70% 30% 50% 50% / 40% 70% 30% 60%; }
+}
+
+@keyframes nebula-morph-2 {
+  0%, 100% { border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%; }
+  33% { border-radius: 30% 70% 60% 40% / 70% 30% 50% 50%; }
+  66% { border-radius: 50% 50% 50% 50% / 40% 60% 40% 60%; }
+}
+
+@keyframes nebula-morph-3 {
+  0%, 100% { border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%; }
+  33% { border-radius: 70% 30% 40% 60% / 30% 70% 30% 70%; }
+  66% { border-radius: 50% 50% 60% 40% / 50% 50% 50% 50%; }
+}
+
+@keyframes nebula-morph-4 {
+  0%, 100% { border-radius: 50% 50% 40% 60% / 40% 60% 40% 60%; }
+  33% { border-radius: 40% 60% 60% 40% / 60% 40% 60% 40%; }
+  66% { border-radius: 60% 40% 40% 60% / 50% 50% 50% 50%; }
+}
+
+/* EarnWithAIHedge — node glow pulse (replaces boxShadow animation) */
+.node-glow-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(240,177,0,0.4);
+  pointer-events: none;
+  will-change: opacity;
+  animation: node-glow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes node-glow-pulse {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* EarnWithAIHedge — travelling dot */
+@keyframes travel-dot {
+  0% { left: 0%; }
+  100% { left: 100%; }
+}
+
+/* HowItWorks — step pulse ring */
+@keyframes step-pulse {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(1.65); opacity: 0; }
+}
+

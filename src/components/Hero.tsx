@@ -12,7 +12,7 @@ export function Hero() {
       'rgba(252, 211, 77, 0.5)',
       'rgba(255, 255, 255, 0.3)',
     ]
-    return [...Array(40)].map((_, i) => ({
+    return [...Array(15)].map((_, i) => ({
       id: i,
       size: Math.random() * 6 + 3,
       x: Math.random() * 100,
@@ -58,75 +58,74 @@ export function Hero() {
       {/* ====== Premium Cinematic Background ====== */}
       <div className="absolute inset-0 overflow-hidden bg-surface-500">
 
-        {/* Layer 1: Deep Nebula Mesh – 4 huge blurred blobs morphing slowly */}
-        <div className="absolute inset-0 pointer-events-none" style={{ filter: 'blur(100px)' }}>
+        {/* Layer 1: Deep Nebula Mesh – borderRadius morphing via CSS, x/y/scale via Framer Motion */}
+        <div className="absolute inset-0 pointer-events-none" style={{ filter: 'blur(100px)', willChange: 'transform' }}>
           <motion.div
             animate={{
               x: [-100, 160, -60, -100],
               y: [-40, 120, -90, -40],
               scale: [1, 1.35, 0.9, 1],
-              borderRadius: ['30% 70% 70% 30% / 30% 30% 70% 70%', '50% 50% 30% 70% / 60% 40% 60% 40%', '70% 30% 50% 50% / 40% 70% 30% 60%', '30% 70% 70% 30% / 30% 30% 70% 70%'],
             }}
             transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut' }}
             className="absolute -top-[15%] left-[10%] w-[700px] h-[700px]"
-            style={{ background: 'radial-gradient(circle, rgba(240,177,0,0.35) 0%, rgba(240,177,0,0.05) 70%, transparent 100%)' }}
+            style={{
+              background: 'radial-gradient(circle, rgba(240,177,0,0.35) 0%, rgba(240,177,0,0.05) 70%, transparent 100%)',
+              animation: 'nebula-morph-1 22s ease-in-out infinite',
+            }}
           />
           <motion.div
             animate={{
               x: [100, -140, 80, 100],
               y: [60, -100, 120, 60],
               scale: [1.15, 0.85, 1.25, 1.15],
-              borderRadius: ['60% 40% 30% 70% / 50% 60% 40% 50%', '30% 70% 60% 40% / 70% 30% 50% 50%', '50% 50% 50% 50% / 40% 60% 40% 60%', '60% 40% 30% 70% / 50% 60% 40% 50%'],
             }}
             transition={{ duration: 28, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
             className="absolute top-[5%] right-[-5%] w-[800px] h-[800px]"
-            style={{ background: 'radial-gradient(circle, rgba(0,229,255,0.3) 0%, rgba(0,229,255,0.05) 65%, transparent 100%)' }}
+            style={{
+              background: 'radial-gradient(circle, rgba(0,229,255,0.3) 0%, rgba(0,229,255,0.05) 65%, transparent 100%)',
+              animation: 'nebula-morph-2 28s ease-in-out infinite 3s',
+            }}
           />
           <motion.div
             animate={{
               x: [-60, 100, -100, -60],
               y: [100, -60, 80, 100],
               scale: [0.9, 1.2, 1.05, 0.9],
-              borderRadius: ['40% 60% 50% 50% / 60% 40% 60% 40%', '70% 30% 40% 60% / 30% 70% 30% 70%', '50% 50% 60% 40% / 50% 50% 50% 50%', '40% 60% 50% 50% / 60% 40% 60% 40%'],
             }}
             transition={{ duration: 24, repeat: Infinity, ease: 'easeInOut', delay: 5 }}
             className="absolute bottom-[-20%] left-[-5%] w-[750px] h-[750px]"
-            style={{ background: 'radial-gradient(circle, rgba(179,136,255,0.3) 0%, rgba(179,136,255,0.05) 65%, transparent 100%)' }}
+            style={{
+              background: 'radial-gradient(circle, rgba(179,136,255,0.3) 0%, rgba(179,136,255,0.05) 65%, transparent 100%)',
+              animation: 'nebula-morph-3 24s ease-in-out infinite 5s',
+            }}
           />
           <motion.div
             animate={{
               x: [80, -80, 40, 80],
               y: [-80, 60, -40, -80],
               scale: [1.1, 0.95, 1.3, 1.1],
-              borderRadius: ['50% 50% 40% 60% / 40% 60% 40% 60%', '40% 60% 60% 40% / 60% 40% 60% 40%', '60% 40% 40% 60% / 50% 50% 50% 50%', '50% 50% 40% 60% / 40% 60% 40% 60%'],
             }}
             transition={{ duration: 26, repeat: Infinity, ease: 'easeInOut', delay: 7 }}
             className="absolute top-[30%] left-[40%] w-[500px] h-[500px]"
-            style={{ background: 'radial-gradient(circle, rgba(240,177,0,0.2) 0%, rgba(252,211,77,0.08) 60%, transparent 100%)' }}
+            style={{
+              background: 'radial-gradient(circle, rgba(240,177,0,0.2) 0%, rgba(252,211,77,0.08) 60%, transparent 100%)',
+              animation: 'nebula-morph-4 26s ease-in-out infinite 7s',
+            }}
           />
         </div>
 
-        {/* Layer 2: Radial Pulse Ring from center */}
+        {/* Layer 2: Radial Pulse Ring — pure CSS */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           {[0, 2, 4].map((delay) => (
-            <motion.div
+            <div
               key={delay}
-              className="absolute rounded-full"
+              className="pulse-ring"
               style={{
                 border: '3px solid rgba(240, 177, 0, 0.25)',
                 boxShadow: '0 0 15px rgba(240, 177, 0, 0.12), inset 0 0 15px rgba(240, 177, 0, 0.06)',
                 width: 200,
                 height: 200,
-              }}
-              animate={{
-                scale: [0.5, 3],
-                opacity: [0.5, 0],
-              }}
-              transition={{
-                duration: 6,
-                repeat: Infinity,
-                ease: 'easeOut',
-                delay,
+                animation: `pulse-ring-expand 6s ease-out infinite ${delay}s`,
               }}
             />
           ))}
@@ -161,9 +160,9 @@ export function Hero() {
           ))}
         </div>
 
-        {/* Layer 4: Hexagonal Grid Overlay */}
+        {/* Layer 4: Hexagonal Grid Overlay — pure CSS animation */}
         <div className="absolute inset-0 overflow-hidden" style={{ perspective: '1200px' }}>
-          <motion.div
+          <div
             className="absolute inset-0 origin-center opacity-[0.12]"
             style={{
               transform: 'rotateX(55deg) scale(2.5)',
@@ -173,14 +172,7 @@ export function Hero() {
               backgroundSize: '56px 100px',
               maskImage: 'radial-gradient(ellipse 70% 60% at 50% 50%, black, transparent)',
               WebkitMaskImage: 'radial-gradient(ellipse 70% 60% at 50% 50%, black, transparent)',
-            }}
-            animate={{
-              backgroundPosition: ['0px 0px', '0px 100px'],
-            }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: 'linear',
+              animation: 'hex-scroll 10s linear infinite',
             }}
           />
         </div>
@@ -198,7 +190,7 @@ export function Hero() {
           }}
         />
 
-        {/* Layer 6: Luminous Floating Particles */}
+        {/* Layer 6: Luminous Floating Particles (reduced from 40 → 15) */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           {particles.map((p) => (
             <motion.div
@@ -211,6 +203,7 @@ export function Hero() {
                 height: p.size,
                 backgroundColor: p.color,
                 boxShadow: `0 0 ${p.size * 4}px ${p.color}, 0 0 ${p.size * 8}px ${p.color}`,
+                willChange: 'transform, opacity',
               }}
               animate={{
                 y: [0, p.driftY, 0],

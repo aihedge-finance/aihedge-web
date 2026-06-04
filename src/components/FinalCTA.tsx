@@ -20,12 +20,15 @@ export function FinalCTA() {
       {/* Double-ring pulse background */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         {[0, 2.5, 5].map((delay) => (
-          <motion.div
+          <div
             key={delay}
-            className="absolute rounded-full border border-brand-500/10"
-            animate={{ scale: [0.6, 2.2], opacity: [0.4, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: 'easeOut', delay }}
-            style={{ width: '500px', height: '500px' }}
+            className="pulse-ring"
+            style={{
+              border: '1px solid rgba(240, 177, 0, 0.1)',
+              width: '500px',
+              height: '500px',
+              animation: `pulse-ring-expand-cta 5s ease-out infinite ${delay}s`,
+            }}
           />
         ))}
         {/* Static central glow */}

@@ -89,11 +89,13 @@ export function HowItWorks() {
                     <div className="flex flex-col items-center text-center group p-4">
                       {/* Pulse icon */}
                       <div className="relative mb-4">
-                        <motion.div
+                        <div
                           className="absolute inset-0 rounded-full"
-                          style={{ border: `1px solid ${step.color}` }}
-                          animate={{ scale: [1, 1.65, 1], opacity: [0.5, 0, 0.5] }}
-                          transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut', delay: i * 0.45 }}
+                          style={{
+                            border: `1px solid ${step.color}`,
+                            animation: `step-pulse 2.5s ease-in-out infinite ${i * 0.45}s`,
+                            willChange: 'transform, opacity',
+                          }}
                         />
                         <motion.div
                           whileHover={{ scale: 1.1 }}
