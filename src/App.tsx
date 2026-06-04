@@ -9,7 +9,7 @@ import { Curators } from './components/Curators'
 import { Ecosystem } from './components/Ecosystem'
 import { FinalCTA } from './components/FinalCTA'
 import { PartnersPage } from './components/PartnersPage'
-import { News } from './components/News'
+// import { News } from './components/News'
 import { ArticlesPage } from './components/ArticlesPage'
 import { Footer } from './components/Footer'
 import { BackToTop } from './components/BackToTop'
@@ -34,7 +34,7 @@ function HomePage() {
       <Curators />
       <Ecosystem />
       <FinalCTA />
-      <News />
+      {/* <News /> */}
     </>
   )
 }
