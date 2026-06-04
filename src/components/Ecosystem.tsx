@@ -92,7 +92,7 @@ export const PARTNERS = [
     logo: '/images/partners/connext_xerc20.svg',
     link: 'https://www.connext.network/xerc20',
     description: 'Connext\'s xERC20 standard facilitates the secure canonical bridging of digital assets across the EVM universe using any number of different bridging services. With xERC20, AI Hedge users can bridge their assets seamlessly using the provider that they prefer.',
-    active: true
+    active: false
   },
   {
     name: 'Cryptio',
@@ -100,7 +100,7 @@ export const PARTNERS = [
     logo: '/images/partners/cryptio.svg',
     link: 'https://www.cryptio.co',
     description: 'Enterprise-grade accounting, audit and tax software for digital assets. Cryptio helps AI Hedge to transparently monitor and display treasury operations, and manage the project\'s financial health.',
-    active: true
+    active: false
   },
   {
     name: 'Crypto.com',
@@ -164,7 +164,7 @@ export const PARTNERS = [
     logo: '/images/partners/insuraceio.svg',
     link: 'https://www.insurace.io',
     description: 'InsurAce provide reliable, robust, and secure protection services to DeFi users, allowing them to secure investment assets against various risks with onchain coverage products.',
-    active: true
+    active: false
   },
   {
     name: 'LayerZero',
@@ -236,7 +236,7 @@ export const PARTNERS = [
     logo: '/images/partners/rabby.svg',
     link: 'https://rabby.io',
     description: 'Rabby is THE game-changing wallet, offering you access to assets on 120 different blockchains, with leading user experience and functionality. Integrated with DeBank\'s portfolio tracker, Rabby helps users to seamlessly manage their portfolios.',
-    active: true
+    active: false
   },
   {
     name: 'RAILGUN',
@@ -244,7 +244,7 @@ export const PARTNERS = [
     logo: '/images/partners/railgun.svg',
     link: 'https://www.railgun.org',
     description: 'RAILGUN is an uncompromising on-chain privacy solution with unparalleled encryption, security. It delivers all the DeFi functionality of a typical wallet, but with privacy embedded at its core.',
-    active: true
+    active: false
   },
   {
     name: 'Safe',
