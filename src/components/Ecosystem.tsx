@@ -17,7 +17,7 @@ export const PARTNERS = [
   {
     name: 'Aave',
     category: 'DEFI',
-    logo: '/images/partners/aave.png',
+    logo: '/images/partners/aave.svg',
     link: 'https://aave.com',
     description: 'Aave is a decentralized non-custodial liquidity market protocol where users can participate as depositors or borrowers. AI Hedge leverages Aave\'s lending pools to generate stable, collateralized yields.',
     active: true
@@ -217,7 +217,7 @@ export const PARTNERS = [
   {
     name: 'OKX Wallet',
     category: 'WALLET',
-    logo: '/images/partners/okx_wallet.webp',
+    logo: '/images/partners/okx_wallet.jpg',
     link: 'https://www.okx.com/web3',
     description: 'OKX Wallet is a secure, multi-platform, non-custodial digital asset wallet supporting over 80 blockchains. AI Hedge integrates OKX Wallet to give users seamless access to institutional-grade yield strategies.',
     active: true
@@ -322,14 +322,14 @@ export const PARTNERS = [
     name: 'XRPL EVM Sidechain',
     category: 'INFRA',
     logo: '/images/partners/xrpl_sidechain.svg',
-    link: 'https://xrpl.org',
+    link: 'https://xrpl.org/evm-sidechain.html',
     description: 'The XRPL EVM Sidechain brings full Ethereum Virtual Machine compatibility to the XRP Ledger ecosystem, allowing developers to deploy composable Solidity smart contracts and leverage XRP as the native gas token.',
     active: true
   },
   {
     name: 'Yearn Finance',
     category: 'INFRA',
-    logo: '/images/partners/yearn.jpg',
+    logo: '/images/partners/yearn.svg',
     link: 'https://yearn.fi',
     description: 'Yearn Finance is a suite of decentralized finance (DeFi) products that provides yield generation, lending aggregation, and more. AI Hedge utilizes Yearn\'s yield infrastructure to maximize returns for vaults.',
     active: true

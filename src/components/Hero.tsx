@@ -147,7 +147,7 @@ export function Hero() {
                 background: 'linear-gradient(90deg, transparent, rgba(240,177,0,0.6) 30%, rgba(255,255,255,0.9) 50%, rgba(0,229,255,0.5) 70%, transparent)',
               }}
               animate={{
-                x: [-200, window.innerWidth + 200],
+                x: [-200, 2500],
                 opacity: [0, 1, 1, 0],
               }}
               transition={{

@@ -200,13 +200,11 @@
 
 .marquee-content-left {
   display: flex;
-  gap: 2.5rem;
   animation: scroll-left 60s linear infinite;
 }
 
 .marquee-content-right {
   display: flex;
-  gap: 2.5rem;
   animation: scroll-right 60s linear infinite;
 }
 

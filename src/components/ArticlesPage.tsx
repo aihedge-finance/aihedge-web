@@ -56,7 +56,7 @@ export function ArticlesPage() {
   }, [])
 
   const handleBack = () => {
-    navigate('/', { state: { scrollTo: 'news' } })
+    navigate('/', { state: { scrollTo: 'ecosystem' } })
   }
   return (
     <div className="min-h-screen bg-surface-500 pt-32 pb-24 relative overflow-hidden">

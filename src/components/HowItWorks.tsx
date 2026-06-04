@@ -158,11 +158,14 @@ export function HowItWorks() {
                           className="absolute bg-gradient-to-r from-brand-500/70 to-accent-cyan/70 rounded-full"
                           style={{
                             top: 0, left: 0,
+                            width: '100%', height: '100%',
                             boxShadow: '0 0 6px rgba(240,177,0,0.5)',
+                            transformOrigin: 'top left',
+                            scaleX: 0,
                           }}
                           animate={inView
-                            ? { width: ['0%', '100%', '100%'], height: '100%' }
-                            : { width: '0%', height: '100%' }
+                            ? { scaleX: [0, 1, 1], scaleY: [0, 1, 1] }
+                            : { scaleX: 0, scaleY: 0 }
                           }
                           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.4 + i * 0.45 }}
                         />
