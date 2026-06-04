@@ -33,7 +33,7 @@ export const PARTNERS = [
   {
     name: 'Arbitrum',
     category: 'INFRA',
-    logo: '/images/partners/arbitrum.png',
+    logo: '/images/partners/arbitrum.svg',
     link: 'https://arbitrum.io',
     description: 'Arbitrum is a leading Layer 2 scaling solution for Ethereum, offering ultra-fast transactions and low gas fees. AI Hedge deploys vaults on Arbitrum to leverage its high throughput and secure execution environment.',
     active: true
@@ -95,6 +95,14 @@ export const PARTNERS = [
     active: false
   },
   {
+    name: 'Convex',
+    category: 'DEFI',
+    logo: '/images/partners/convex.svg',
+    link: 'https://www.convexfinance.com',
+    description: 'Convex Finance allows Curve liquidity providers and CRV stakers to boost rewards and maximize yield potential. AI Hedge leverages Convex to amplify yield generation across our automated vaults.',
+    active: true
+  },
+  {
     name: 'Cryptio',
     category: 'GOVERNANCE',
     logo: '/images/partners/cryptio.svg',
@@ -109,6 +117,14 @@ export const PARTNERS = [
     link: 'https://crypto.com',
     description: 'One of the world\'s largest digital asset exchanges, Crypto.com offers access to hundreds of digital assets at the click of a button. CDC also built and maintain the Cronos blockchain, an EVM chain that hosts AI Hedge yield strategies.',
     active: false
+  },
+  {
+    name: 'Curve.fi',
+    category: 'DEFI',
+    logo: '/images/partners/curve.svg',
+    link: 'https://curve.fi',
+    description: 'Curve is a decentralized exchange liquidity pool designed for extremely efficient stablecoin trading and low-slippage swaps. AI Hedge integrates Curve pools to deploy low-risk, high-efficiency yield strategies.',
+    active: true
   },
   {
     name: 'DeBank',
