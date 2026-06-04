@@ -73,6 +73,25 @@ export function Footer() {
           {/* Link columns */}
           {Object.entries(FOOTER_LINKS).map(([title, links]) => (
             <div key={title}>
+              {title === 'Developers' && (
+                <>
+                  <h4 className="text-sm font-semibold text-white mb-4 tracking-wide">
+                    Curators
+                  </h4>
+                  <ul className="space-y-3 mb-6">
+                    <li>
+                      <a
+                        href="https://dapp.aihedge.finance"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-gray-500 hover:text-gray-300 transition-colors duration-200"
+                      >
+                        Create Vault
+                      </a>
+                    </li>
+                  </ul>
+                </>
+              )}
               <h4 className="text-sm font-semibold text-white mb-4 tracking-wide">
                 {title}
               </h4>
