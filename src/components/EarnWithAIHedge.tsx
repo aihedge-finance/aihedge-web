@@ -66,7 +66,7 @@ export function EarnWithAIHedge() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <FadeIn className="text-center mb-12">
-          <p className="text-brand-500 font-semibold text-sm tracking-widest uppercase mb-3">How You Earn</p>
+          <p className="text-accent-cyan font-semibold text-sm tracking-widest uppercase mb-3">How You Earn</p>
           <h2 className="section-heading gradient-text mb-4">
             Earn with AI Hedge
           </h2>

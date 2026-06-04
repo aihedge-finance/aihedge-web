@@ -60,7 +60,7 @@ export function HowItWorks() {
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <FadeIn>
-            <p className="text-accent-purple font-semibold text-sm tracking-widest uppercase mb-4">
+            <p className="text-accent-cyan font-semibold text-sm tracking-widest uppercase mb-4">
               How It Works
             </p>
           </FadeIn>

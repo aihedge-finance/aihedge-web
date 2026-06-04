@@ -366,11 +366,13 @@ export function Ecosystem() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 text-center mb-12">
         <FadeIn>
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-white mb-8 tracking-tight">
+          <h2 className="text-4xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">
             Our Ecosystem
           </h2>
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            Our success is built on the shared growth and collective strength of our partners.
+          </p>
         </FadeIn>
-
       </div>
 
       {/* Rolling Banner */}
