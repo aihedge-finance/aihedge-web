@@ -11,8 +11,8 @@ const FOOTER_LINKS = {
     { label: 'Partners', href: '/partners' },
   ],
   Builders: [
-    { label: 'Create Vault', href: 'https://dapp.aihedge.finance', external: true },
-    { label: 'Deploy Strategy', href: 'https://dapp.aihedge.finance', external: true },
+    // { label: 'Create Vault', href: 'https://dapp.aihedge.finance', external: true },
+    // { label: 'Deploy Strategy', href: 'https://dapp.aihedge.finance', external: true },
     { label: 'GitHub', href: 'https://github.com/aihedge-finance', external: true },
   ],
 }
