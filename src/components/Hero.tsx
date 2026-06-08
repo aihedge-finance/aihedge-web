@@ -38,14 +38,14 @@ export function Hero() {
   }, [])
 
   const floatingTokens = useMemo(() => [
-    { id: 'eth',  src: '/images/partners/ethereum.svg',      size: 80, x: 8,  y: 12, floatY: 18, floatDur: 7,   delay: 0,   glow: 'rgba(130,170,255,0.5)'  },
-    { id: 'btc',  src: '/images/partners/bitcoin.svg',        size: 72, x: 85, y: 18, floatY: 14, floatDur: 8,   delay: 1,   glow: 'rgba(247,147,26,0.5)'  },
-    { id: 'sol',  src: '/images/partners/solana.svg',         size: 64, x: 5,  y: 55, floatY: 20, floatDur: 6.5, delay: 0.5, glow: 'rgba(153,69,255,0.5)'  },
-    { id: 'aave', src: '/images/partners/aave.svg',          size: 60, x: 90, y: 50, floatY: 16, floatDur: 7.5, delay: 2,   glow: 'rgba(43,180,196,0.5)'  },
-    { id: 'xrpl', src: '/images/partners/xrp.svg',           size: 56, x: 12, y: 82, floatY: 12, floatDur: 9,   delay: 1.5, glow: 'rgba(0,165,223,0.5)'  },
-    { id: 'uni',  src: '/images/partners/uniswap.svg',        size: 68, x: 78, y: 78, floatY: 18, floatDur: 6,   delay: 3,   glow: 'rgba(255,0,122,0.5)'   },
-    { id: 'arb',  src: '/images/partners/arbitrum.svg',       size: 54, x: 25, y: 8,  floatY: 15, floatDur: 8.5, delay: 2.5, glow: 'rgba(40,160,240,0.5)'  },
-    { id: 'op',   src: '/images/partners/optimism.svg', size: 52, x: 72, y: 10, floatY: 13, floatDur: 7,   delay: 0.8, glow: 'rgba(255,4,32,0.5)'    },
+    { id: 'eth', src: '/images/partners/ethereum.svg', size: 80, x: 8, y: 12, floatY: 18, floatDur: 7, delay: 0, glow: 'rgba(130,170,255,0.5)' },
+    { id: 'btc', src: '/images/partners/bitcoin.svg', size: 72, x: 85, y: 18, floatY: 14, floatDur: 8, delay: 1, glow: 'rgba(247,147,26,0.5)' },
+    { id: 'sol', src: '/images/partners/solana.svg', size: 64, x: 5, y: 55, floatY: 20, floatDur: 6.5, delay: 0.5, glow: 'rgba(153,69,255,0.5)' },
+    { id: 'aave', src: '/images/partners/aave.svg', size: 60, x: 90, y: 50, floatY: 16, floatDur: 7.5, delay: 2, glow: 'rgba(43,180,196,0.5)' },
+    { id: 'xrpl', src: '/images/partners/xrp.svg', size: 56, x: 12, y: 82, floatY: 12, floatDur: 9, delay: 1.5, glow: 'rgba(0,165,223,0.5)' },
+    { id: 'uni', src: '/images/partners/uniswap.svg', size: 68, x: 78, y: 78, floatY: 18, floatDur: 6, delay: 3, glow: 'rgba(255,0,122,0.5)' },
+    { id: 'arb', src: '/images/partners/arbitrum.svg', size: 54, x: 25, y: 8, floatY: 15, floatDur: 8.5, delay: 2.5, glow: 'rgba(40,160,240,0.5)' },
+    { id: 'op', src: '/images/partners/optimism.svg', size: 52, x: 72, y: 10, floatY: 13, floatDur: 7, delay: 0.8, glow: 'rgba(255,4,32,0.5)' },
   ], [])
 
   const [hoveredToken, setHoveredToken] = useState<string | null>(null)
@@ -314,15 +314,6 @@ export function Hero() {
             >
               Launch App
               <ArrowRight className="w-5 h-5" />
-            </a>
-            <a
-              href="https://docs.aihedge.finance"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-secondary text-base px-8 py-4"
-              id="hero-view-docs"
-            >
-              View Docs
             </a>
           </div>
         </FadeIn>
