@@ -82,10 +82,10 @@ export function HowItWorks() {
           <FadeIn delay={0.15}>
             <div className="flex flex-col md:flex-row items-stretch gap-0">
               {STEPS.map((step, i) => (
-                <div key={step.number} className="flex md:flex-col items-center flex-1">
+                <div key={step.number} className="flex flex-col items-center flex-1">
 
                   {/* Step card */}
-                  <div className="flex-1 w-full">
+                  <div className="w-full max-w-xs md:max-w-none mx-auto">
                     <div className="flex flex-col items-center text-center group p-4">
                       {/* Pulse icon */}
                       <div className="relative mb-4">
@@ -142,8 +142,8 @@ export function HowItWorks() {
                   {i < STEPS.length - 1 && (
                     <div className="
                       flex-shrink-0
-                      md:w-auto md:h-auto
-                      w-full h-8 md:h-[64px]
+                      w-full md:w-auto
+                      h-10 md:h-[64px]
                       flex items-center justify-center
                       md:self-start md:mt-[36px]
                       relative
@@ -151,7 +151,7 @@ export function HowItWorks() {
                     ">
                       {/* Track */}
                       <div className="
-                        md:w-10 md:h-[2px] md:flex-row
+                        md:w-10 md:h-[2px]
                         w-[2px] h-full
                         bg-white/10 rounded-full relative overflow-hidden
                       ">
