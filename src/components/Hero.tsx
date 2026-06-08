@@ -114,22 +114,6 @@ export function Hero() {
           />
         </div>
 
-        {/* Layer 2: Radial Pulse Ring — pure CSS */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          {[0, 2, 4].map((delay) => (
-            <div
-              key={delay}
-              className="pulse-ring"
-              style={{
-                border: '3px solid rgba(240, 177, 0, 0.25)',
-                boxShadow: '0 0 15px rgba(240, 177, 0, 0.12), inset 0 0 15px rgba(240, 177, 0, 0.06)',
-                width: 200,
-                height: 200,
-                animation: `pulse-ring-expand 6s ease-out infinite ${delay}s`,
-              }}
-            />
-          ))}
-        </div>
 
         {/* Layer 3: Shooting Light Streaks */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">

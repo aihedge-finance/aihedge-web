@@ -41,7 +41,7 @@ function HomePage() {
 
 function App() {
   return (
-    <div className="min-h-screen bg-surface-500">
+    <div className="min-h-screen bg-surface-500 overflow-x-hidden">
       <Navbar />
       <main>
         <Routes>
