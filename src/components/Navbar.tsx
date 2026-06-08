@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Menu, X, FileText } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 const NAV_LINKS = [
   // { label: 'Yield Earners', href: '/#yield-earners' },

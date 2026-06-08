@@ -1,13 +1,14 @@
 {
   "name": "aihedge-web",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "chmod +x scripts/setup-git-hooks.sh && ./scripts/setup-git-hooks.sh"
   },
   "dependencies": {
     "framer-motion": "^12.40.0",
