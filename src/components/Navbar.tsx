@@ -75,7 +75,7 @@ export function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <a
+          {/* <a
             href="/whitepaper.pdf"
             target="_blank"
             rel="noopener noreferrer"
@@ -84,7 +84,7 @@ export function Navbar() {
           >
             <FileText className="w-4 h-4" />
             Whitepaper
-          </a>
+          </a> */}
           <a
             href="https://dapp.aihedge.finance"
             target="_blank"
@@ -131,7 +131,7 @@ export function Navbar() {
             )
           })}
           <div className="flex flex-col gap-3 mt-4">
-            <a
+            {/* <a
               href="/whitepaper.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -139,7 +139,7 @@ export function Navbar() {
             >
               <FileText className="w-4 h-4" />
               Whitepaper
-            </a>
+            </a> */}
             <a
               href="https://dapp.aihedge.finance"
               target="_blank"

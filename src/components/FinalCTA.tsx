@@ -98,7 +98,7 @@ export function FinalCTA() {
               Launch App
               <ArrowRight className="w-5 h-5" />
             </a>
-            <a
+            {/* <a
               href="/whitepaper.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -106,7 +106,7 @@ export function FinalCTA() {
               id="final-cta-whitepaper"
             >
               Read Whitepaper
-            </a>
+            </a> */}
           </div>
         </FadeIn>
 

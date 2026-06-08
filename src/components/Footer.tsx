@@ -2,7 +2,7 @@
 const FOOTER_LINKS = {
   Protocol: [
     { label: 'Launch App', href: 'https://dapp.aihedge.finance', external: true },
-    { label: 'Whitepaper', href: '/whitepaper.pdf', external: true },
+    // { label: 'Whitepaper', href: '/whitepaper.pdf', external: true },
     { label: 'Documentation', href: 'https://docs.aihedge.finance', external: true },
   ],
   Community: [
