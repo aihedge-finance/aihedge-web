@@ -274,7 +274,7 @@ export function Hero() {
         {/* Headline */}
         <FadeIn delay={0.25}>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tight leading-[1.15] mb-6">
-            <span className="block text-white pb-1">Invest wisely with</span>
+            <span className="block text-white pb-1">Earn wisely with</span>
             <span className="block gradient-text pb-2">AI Hedge</span>
           </h1>
         </FadeIn>
