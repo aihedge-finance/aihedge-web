@@ -2,11 +2,18 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 
-const NAV_LINKS = [
+interface NavLinkItem {
+  label: string
+  href: string
+  external?: boolean
+}
+
+const NAV_LINKS: NavLinkItem[] = [
   // { label: 'Yield Earners', href: '/#yield-earners' },
   { label: 'How It Works', href: '/#how-it-works' },
   // { label: 'Vault Creation', href: '/#curators' },
   { label: 'Ecosystem', href: '/#ecosystem' },
+  { label: 'Letters to Partners', href: 'https://docs.aihedge.finance/letters', external: true },
   // { label: 'News', href: '/#news' },
 ]
 
@@ -22,7 +29,7 @@ export function Navbar() {
   }, [])
 
   useEffect(() => {
-    const ids = NAV_LINKS.map((l) => l.href.replace('/#', ''))
+    const ids = NAV_LINKS.filter((l) => l.href.startsWith('/#')).map((l) => l.href.replace('/#', ''))
     const observers = ids.map((id) => {
       const el = document.getElementById(id)
       if (!el) return null
@@ -62,6 +69,7 @@ export function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
+                {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                 className={`text-sm transition-colors duration-200 font-medium ${
                   isActive ? 'text-white' : 'text-gray-400 hover:text-white'
                 }`}
@@ -122,6 +130,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
+                {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                 className={`block py-3 transition-colors font-medium ${
                   isActive ? 'text-white' : 'text-gray-400 hover:text-white'
                 }`}
