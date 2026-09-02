@@ -13,6 +13,7 @@ const NAV_LINKS: NavLinkItem[] = [
   { label: 'How It Works', href: '/#how-it-works' },
   // { label: 'Vault Creation', href: '/#curators' },
   { label: 'Ecosystem', href: '/#ecosystem' },
+  { label: 'Docs', href: 'https://docs.aihedge.finance', external: true },
   { label: 'Letters to Partners', href: 'https://docs.aihedge.finance/letters', external: true },
   // { label: 'News', href: '/#news' },
 ]
